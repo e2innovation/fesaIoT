@@ -1,18 +1,19 @@
-# Capacitación de Aplicaciones IIoT
-
-<div align="center">
-<img src="./Recursos/Imagenes/e2i_logo.png" alt="logo" height="60"></img>
-</div>
-
-<div align="center">
-<img src="./Recursos/Imagenes/Ferreyros.png" alt="logo" height="120"></img>
-</div>
+# Test de Monitoreo CANBus
 
 # IoT CanBUS
+<div align="center">
+<img src="../Recursos/Imagenes/e2i_logo.png" alt="logo" height="60"></img>
+</div>
+
 
 About it
----
-This repository contains a DB according each ECU or nodes at can bus. Data read from these peripherals is sent to our servers. 
+--- 
+
+# Start
+init with the command -> node src/app.js, one time execute this isn't show information, if you want to check the process check in other terminal -> tail -f logs/year/month/date/date.log.
+
+# Simulate data CanBus
+For simulare data CanBus, init the command -> node utils/sendCan/canSend.js
 
 # CanBus
 
@@ -37,11 +38,9 @@ para enviar data a aws se ejcuta el siguiente comando:
     sudo node /home/pi/iot/src/app.js
 
 
-# Sources
+# Notes
 
 - [Andino X1 - CanBus](https://andino.systems/extensions/can)
-
-
 
 ## Archivo de configuración: config.json
 
@@ -59,7 +58,7 @@ El archivo de configuración del programa almacena los siguientes parámetros:
 sudo ip link set can0 up type can bitrate 250000
 ```
 
-## Can Data Interpretation
+## Can Data
 ```
 can0 0CF00400#FFFF7D0000FF0FFF
 ```
@@ -126,6 +125,7 @@ FFFF7D0000FF0FFF
 FF  FF  7D  68  13  FF  0F  FF
 ```
 
+```
 1.1 4 bits = -F
 2 1 byte = 0F 
 3 1 byte = FF
@@ -133,6 +133,7 @@ FF  FF  7D  68  13  FF  0F  FF
 6 1 byte = 7D
 7.1 4 bits = -F
 8 1 byte = FF
+```
 
 #### SPN 190
 Littel endian
@@ -154,3 +155,4 @@ Converto decimal
 ```
 Valor: 0 + 0.125 * 4968 = 621 RPM
 ```
+
