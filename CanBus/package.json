@@ -1,0 +1,26 @@
+{
+    "name": "canbus",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "aws-iot-device-sdk-v2": "^1.19.5",
+        "crypto": "^1.0.1",
+        "dotenv": "^16.4.5",
+        "fs": "^0.0.1-security",
+        "is-online": "^9.0.1",
+        "line-reader-sync": "^0.1.0",
+        "path": "^0.12.7",
+        "proper-lockfile": "^4.1.2",
+        "socketcan": "^4.0.4",
+        "winston": "^3.13.0",
+        "winston-daily-rotate-file": "^5.0.0",
+        "xml2js": "^0.6.2"
+    }
+}

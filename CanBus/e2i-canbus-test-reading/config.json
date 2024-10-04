@@ -1,0 +1,18 @@
+{
+    "program-reading": {
+        
+        "canPort": "can0"
+    },
+    "program-sending": {
+        "mqtt": {
+            "localhost": "192.168.1.238"
+        }
+    },
+    "Influx":{
+        "INFLUX_URL": "http://192.168.1.238:8086",
+        "INFLUX_TOKEN":"bSntDekd0mPYpfU_nNNS8jWdoSjHhAfbe1RkXsRHnEbR1uLKJcPYx_Whkur3rQBDM_cMwC99ouTVwOwckFdN1A==",
+        "INFLUX_ORG":"e2i",
+        "INFLUX_BUCKET":"bucket",
+        "INFLUX_TEST_BUCKET": "test2_bucket"
+    }
+}

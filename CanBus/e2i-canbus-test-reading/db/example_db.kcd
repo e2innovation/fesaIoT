@@ -1,0 +1,35 @@
+<NetworkDefinition>
+	<Document name="Base de datos" version="1.0.0" author="E2i" date="2024">
+
+	</Document> 
+	<Node id="1" name="ARDUINO_CAN" device="board"/>
+	 
+	<Bus name="canBus">
+		<Message id="0xFEF5" format="extended" name="Machine" length="8">
+			<Producer>
+				<NodeRef id="5"/>
+			</Producer>
+			<Signal  name="bar_press"  offset="0" length="1" spn="108">
+				<Value  dataPosition="data_1" description="Barometric Pressure" type="unsigned" unit="kPa" factor="0.5" offvalue="0" min="0" max="2" MeasureValueType="DOUBLE" lowerLimit="0" upperLimit="125" />
+			</Signal>
+			<Signal  name="eng_intake_1_air_temp"  offset="5" length="1" spn="172">
+				<Value  dataPosition="data_2" description="Engine Intake 1 Air Temperature" type="unsigned" unit="°C" factor="1" offvalue="-40" min="0" max="2" MeasureValueType="BIGINT" lowerLimit="-40" upperLimit="210" />
+			</Signal>
+		</Message>
+
+		<Message id="0xF004" format="extended" name="Machine" length="8">
+			<Producer>
+				<NodeRef id="5"/>
+			</Producer>
+			<Signal  name="eng_speed"  offset="3" length="2" spn="190">
+				<Value  dataPosition="data_1" description="Engine Speed" type="unsigned" unit="rpm" factor="0.125" offvalue="0" min="0" max="200" MeasureValueType="DOUBLE" lowerLimit="0" upperLimit="8031.875" />
+			</Signal>
+			<Signal  name="eng_perc_torq"  offset="2" length="1" spn="513">
+				<Value  dataPosition="data_2" description="Engine Speed" type="unsigned" unit="%" factor="1" offvalue="-125" min="0" max="10" MeasureValueType="BIGINT" lowerLimit="-125" upperLimit="125" />
+			</Signal>
+			<Signal  name="eng_starter_status"  offset="6.5" length="0.5" spn="1675">
+				<Value  dataPosition="data_3" description="Engine Starter Mode" type="unsigned" unit="none" factor="1" offvalue="0" min="0" max="10" MeasureValueType="BIGINT" lowerLimit="0" upperLimit="15" />
+			</Signal>
+		</Message>
+	</Bus>
+</NetworkDefinition>
